@@ -1,1 +1,1 @@
-// console.log(`coordinateRadar.js is connected!`);
+console.log(`coordinateRadar.js is connected!`);
