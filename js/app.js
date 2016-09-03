@@ -1,6 +1,8 @@
+//Define instance of liamNeeson object
 const liam = new LiamNeeson(400, 300);
 liam.setArrowHandler();
 
+//Defines bullet array and connects it with spacebar control
 let bullets = [];
 document.body.addEventListener('keydown', (e) => {
   if (e.keyCode === 32) {
@@ -8,14 +10,19 @@ document.body.addEventListener('keydown', (e) => {
   } console.log(`press`);
 });
 
+//Defines minion array
 // let minions = [new Minion(20, 20), new Minion(70, 20), new Minion(40, 20)];
+let minions = [];
+for (let i = 0; i < 10; i++) {
+  minions.push(new Minion(Math.floor(Math.random()), 20))
+}
 
-// let collisionThreshold = 30;
-//
-// setInterval(() => {
-//   collisionThreshold--;
-//   console.log(collisionThreshold);
-// }, 1000);
+let collisionThreshold = 30;
+
+setInterval(() => {
+  collisionThreshold--;
+  console.log(collisionThreshold);
+}, 2000);
 
 function draw() {
   const canvasContext = document.getElementById('canvas').getContext('2d');
@@ -30,17 +37,16 @@ function draw() {
     canvasContext.drawImage(bullet.el, bullet.x, bullet.y, 100, 100);
     bullet.step();
 
-  //
-  //   minions.forEach((mini) => {
-  //     if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
-  //         Math.abs(bullet.y - mini.y) < collisionThreshold) {
-  //           minions.splice(mini, 1);
-  //           liam.enthusiam += 5;
-  //       console.log("BOOOM!");
-  //     }
-  //   });
-  //
-    if (bullet.y < -100){
+    minions.forEach((mini) => {
+      if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
+        Math.abs(bullet.y - mini.y) < collisionThreshold) {
+        minions.splice(mini, 1);
+        liam.enthusiam += 5;
+        console.log("BOOOM!");
+      }
+    });
+
+    if (bullet.y < -100) {
       return null;
     } else {
       return bullet;
@@ -49,12 +55,11 @@ function draw() {
 
   bullets = bullets.filter((ele) => ele);
 
-  // // Make the min's move
-  // minions.forEach((mini) => {
-  //   mini.step();
-  //   canvasContext.drawImage(mini.el, mini.x, mini.y, collisionThreshold*2, collisionThreshold*2);
-  // });
-
+  // Make the min's move
+  minions.forEach((mini) => {
+    mini.step();
+    canvasContext.drawImage(mini.el, mini.x, mini.y, collisionThreshold * 2, collisionThreshold * 2);
+  });
 
   window.requestAnimationFrame(draw);
 }
