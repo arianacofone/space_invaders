@@ -1,16 +1,15 @@
 const liam = new LiamNeeson(400, 300);
 liam.setArrowHandler();
 
-// let bullets = [];
+let bullets = [];
+document.body.addEventListener('keydown', (e) => {
+  if (e.keyCode === 32) {
+    bullets.push(new Bullet(liam.x, 350));
+  } console.log(`press`);
+});
 
-// document.body.addEventListener('keydown', (e) => {
-//   if (e.keyCode == 32) {
-//     bullets.push(new Bullet(liam.x, 350));
-//   }
-// });
-//
 // let minions = [new Minion(20, 20), new Minion(70, 20), new Minion(40, 20)];
-//
+
 // let collisionThreshold = 30;
 //
 // setInterval(() => {
@@ -26,11 +25,11 @@ function draw() {
   canvasContext.drawImage(liam.el, liam.x, liam.y, 100, 100);
 
 
-  // bullets = bullets.map((bullet) => {
-  //   // Maybe... remove any bullets that are past 0 in the y axis?
-  //   bullet.step();
-  //   bullet.remo
-  //   canvasContext.drawImage(bullet.el, bullet.x, bullet.y, 100, 100);
+  bullets = bullets.map((bullet) => {
+    //TODO: Remove any bullets past 0 in the y axis?
+    canvasContext.drawImage(bullet.el, bullet.x, bullet.y, 100, 100);
+    bullet.step();
+
   //
   //   minions.forEach((mini) => {
   //     if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
@@ -41,15 +40,15 @@ function draw() {
   //     }
   //   });
   //
-  //   if (bullet.y < -100){
-  //     return null;
-  //   } else {
-  //     return bullet;
-  //   }
-  // });
-  //
-  // bullets = bullets.filter((ele) => ele);
-  //
+    if (bullet.y < -100){
+      return null;
+    } else {
+      return bullet;
+    }
+  });
+
+  bullets = bullets.filter((ele) => ele);
+
   // // Make the min's move
   // minions.forEach((mini) => {
   //   mini.step();
@@ -65,32 +64,7 @@ draw();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // canvas perimeters
+// Previous App Functionality
 // const canvas = document.querySelector('#app');
 // const screen = canvas.getContext('2d');
 // const size = { x: 15, y: 15};

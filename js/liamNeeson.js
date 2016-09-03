@@ -10,9 +10,9 @@ class LiamNeeson {
   }
   setArrowHandler() {
     document.body.addEventListener('keydown', (e) => {
-      if (e.keyCode == 37) {
+      if (e.keyCode === 37) {
         this.x -= 30;
-      } else if (e.keyCode == 39) {
+      } else if (e.keyCode === 39) {
         this.x += 30;
       }
     });
