@@ -5,7 +5,7 @@ class LiamNeeson {
     this.x = x;
     this.y = y;
     this.el = new Image();
-    this.el.src = 'liam.jpg';
+    this.el.src = 'css/neeson_sprite_01.png';
     this.enthusiam = 0;
   }
   setArrowHandler() {

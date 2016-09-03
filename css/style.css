@@ -1,0 +1,83 @@
+body {
+  background:url("http://static.tumblr.com/e6c66693fd556d0238902201972d0600/z7sewyz/vwWo7w6i4/tumblr_static_7lsovhd013kssko4og8osc80k.gif");
+  position: fixed;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 1300px;
+  height: 1300px;
+  z-index: -5;
+  position: relative;
+  top: -30rem;
+  left: -5rem;
+  -webkit-animation:spin 150s linear infinite;
+  -moz-animation:spin 150s linear infinite;
+  animation:spin 150s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% { -webkit-transform: rotateY(360deg); transform:rotate(360deg); } }
+
+
+body h1, h2, h3 {
+  color: white;
+  text-align: center;
+}
+
+#space-invaders {
+  letter-spacing: 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 2.5rem;
+}
+
+#taken {
+  font-size: 1.9rem;
+  font-weight: bolder;
+  color: rgb(201,50,16);
+  text-shadow: .001rem .001rem white;
+  letter-spacing: 0.1rem;
+  font-family: sans-serif;
+  /*Rotation CSS Code*/
+  transform: rotate(-18deg);
+  -ms-transform: rotate(-18deg);
+  -webkit-transform: rotate(-18deg);
+  margin-top: -1rem;
+}
+
+#name {
+  font-family: 'Lato', sans-serif;
+  font-size: 4rem;
+  font-weight: bolder;
+  color: rgb(219,223,224);
+  line-height: 0;
+  letter-spacing: 0.5rem;
+  text-shadow: 2px 2px rgb(249,61,61);
+  text-align: center;
+}
+
+#canvas {
+  position: fixed;
+  top: 15rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(71,74,83,0);
+  border: 2px solid rgba(151,153,158,0);
+}
+
+/*#liamNeeson {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  color: white;
+}*/

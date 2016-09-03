@@ -4,8 +4,8 @@ class Bullet {
     this.x = x;
     this.y = y;
     this.velocity = 25;
-    this.el = new Image();
-    this.el.src = 'http://andrewmadden.com/ahh.png';
+    this.el = new Image(2, 2);
+    this.el.src = 'css/neeson_punch_01.png';
   }
   step() {
     this.y -= this.velocity;
