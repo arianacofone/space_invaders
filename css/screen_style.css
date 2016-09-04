@@ -1,0 +1,66 @@
+/********LIAM NEESON INVADERS REVEAL*******/
+
+body {
+  background-image: url('https://s3.amazonaws.com/lifesite/Miscellaneous/Liam_Neeson_pointing.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height:100%;
+  width:100%;
+}
+
+/********FAKE SPACE INVADERS PAGE*******/
+
+#splash-screen {
+  background: url("neeson_background_01.jpg");
+  background-size: cover;
+  /*margin: 0 auto;*/
+  position:  fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  bottom:0;
+  width: 100%;
+}
+
+h3 {
+  /*font-family: Impact, "sans-serif";*/
+  margin-top: 10rem;
+  letter-spacing: 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+}
+
+h5 {
+  font-family: 'VT323', monospace;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10rem;
+}
+
+#blink {
+  animation: blinker 3s linear infinite;
+  color: rgb(21,164,134);
+}
+
+@keyframes blinker {
+  50% { opacity: 0.4; }
+}
+
+.hide{
+  opacity: 0;
+ }
+.fade-out {
+  transition:1s linear all;
+}
+
+/*#static {
+  background: url("giphy.gif");
+  /*background: url("neeson_background_01.jpg");
+  background-size: cover;*/
+  /*position: fixed;
+  -webkit-animation: slide 2s linear;*/
+   /*background-image: url("http://giphy.com/gifs/eHPw416y8QswM/html5");*/
+}*/

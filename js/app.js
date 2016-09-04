@@ -1,3 +1,8 @@
+// let el = document.querySelector('#start-button')[0].addEventListener('click', ((e) => {
+//   .fadeOut(500);
+//    console.log('Button clicked');
+// });
+
 //Define instance of liamNeeson object
 const liam = new LiamNeeson(400, 300);
 liam.setArrowHandler();
