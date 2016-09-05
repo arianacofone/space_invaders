@@ -1,11 +1,52 @@
 /********LIAM NEESON INVADERS REVEAL*******/
 
 body {
-  background-image: url('https://s3.amazonaws.com/lifesite/Miscellaneous/Liam_Neeson_pointing.jpg');
+  background-image: url('http://www.secretsofthefed.com/wp-content/uploads/2015/01/liam-neeson-gun-2.jpg');
   background-size: cover;
   background-attachment: fixed;
   height:100%;
   width:100%;
+}
+
+#quote {
+  text-align: left;
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  color: black;
+  /*margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end);*/
+}
+
+#kick-ass {
+
+}
+
+#titleOne {
+  font-family: Impact, "sans-serif";
+  font-size: 12rem;
+  text-align: center;
+  color: rgb(171,27,22);
+  margin-top: -2rem;
+}
+
+#titleTwo {
+  font-family: 'VT323', monospace;
+  text-align: center;
+  font-size: 10rem;
+  color: white;
+  margin-top: -7rem;
+}
+
+#titleThree {
+  font-family: Impact, "sans-serif";
+  text-align: center;
+  font-size: 16rem;
+  color: rgb(171,27,22);
+  margin-top: -9rem;
+  margin-bottom: 0;
 }
 
 /********FAKE SPACE INVADERS PAGE*******/
@@ -13,7 +54,6 @@ body {
 #splash-screen {
   background: url("neeson_background_01.jpg");
   background-size: cover;
-  /*margin: 0 auto;*/
   position:  fixed;
   top: 0;
   bottom: 0;
@@ -55,12 +95,3 @@ h5 {
 .fade-out {
   transition:1s linear all;
 }
-
-/*#static {
-  background: url("giphy.gif");
-  /*background: url("neeson_background_01.jpg");
-  background-size: cover;*/
-  /*position: fixed;
-  -webkit-animation: slide 2s linear;*/
-   /*background-image: url("http://giphy.com/gifs/eHPw416y8QswM/html5");*/
-}*/
