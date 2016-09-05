@@ -10,7 +10,7 @@ it became a game that would haunt me forever (Curse you level 2!). Faced with my
 project as a developer, I knew I had to attempt this beast of a game, but with a 
 twist. Liam Neeson.
 
-Enjoy it on my <a href="http://arianadziedzic.com/pickUpSticks/index.html">website</a>!
+Enjoy it on my <a href="http://arianadziedzic.com/pickUpSticks/index.html" target="_blank">website</a>!
 
 ## Getting Started
 Want to make a Space Invaders version of your own, but with Angelina Jolie as the lead? No problem! 
