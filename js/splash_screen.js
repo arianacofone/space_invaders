@@ -14,7 +14,7 @@ let letter = 0;
 const quote = `Once more into the fray. Into the last good fight I'll ever know. Live and die on this day.Live and die on this day.`;
 
 const quoteNode = document.querySelector('#quote');
-const kickAss = document.querySelector('#kick-ass');
+const action = document.querySelector('#action');
 
 const titleOne = document.createElement('p');
 titleOne.setAttribute('id', 'titleOne');
@@ -44,32 +44,39 @@ document.body.addEventListener('keydown', (e) => {
     // type(document.querySelector('#quote'));
 
     function fadeOut(el, speed ) {
-        var seconds = speed/1000;
-        child.style.transition = "opacity "+seconds+"s ease";
-        child.style.opacity = 0;
-        setTimeout(function() {
-          parent.removeChild(child);
-        }, speed);
-    }
-    fadeOut(document.getElementById('child'), 1000);
-    // parent.appendChild(quoteWords);
-
+      let seconds = speed/10000;
+      child.style.transition = "opacity "+seconds+"s ease";
+      child.style.opacity = 0;
+      setTimeout(function() {
+        parent.removeChild(child);
+      }, speed);
   }
+  fadeOut(document.getElementById('child'), 10000);
+  // parent.appendChild(quoteWords);
+}
 });
 
 document.body.addEventListener('keydown', (e) => {
   if (e.keyCode === 13) {
     parent.removeChild(quoteNode);
-    parent.removeChild(kickAss);
+    parent.removeChild(action);
     parent.appendChild(titleOne);
     parent.appendChild(titleTwo);
     parent.appendChild(titleThree);
   }
-  // function fadeIn(el, speed ) {
-  //     var seconds = speed/1000;
-  //     child.style.transition = "opacity "+seconds+"s ease";
-  //     child.style.opacity = 0;
-  //     setTimeout(function() {
-  //       parent.removeChild(child);
-  //     }, speed);
+});
+
+let delay = null;
+
+document.body.addEventListener('keyup', (e) => {
+  if (e.keyCode === 13) {
+    if(delay != null) {
+      clearTimeout(delay);
+    }
+    let timeout = setTimeout(function () {
+        timeout = undefined;
+        window.location = 'http://arianadziedzic.com/pickUpSticks/';
+    }, 2500);
+
+  }
 });
