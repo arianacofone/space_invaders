@@ -75,7 +75,7 @@ document.body.addEventListener('keyup', (e) => {
     }
     let timeout = setTimeout(function () {
         timeout = undefined;
-        window.location = 'index.html';
+        window.location = 'game.html';
     }, 2500);
 
   }
