@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Space Invaders + Liam Neeson</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="lives">
+      <p>LIVES:
+      <img class="life" src="css/neeson_sprite_01.png"/>
+      <img class="life" src="css/neeson_sprite_01.png"/>
+      <img class="life" src="css/neeson_sprite_01.png"/>
+      </p>
+    </div>
+    <div id="timer">0:30</div>
+
+    <div id="score">SCORE:0</div>
+
+    <img class="image" src="css/modern_space_bkground.jpg"/>
+
+    <canvas id="canvas" width="1000" height="600"></canvas>
+
+    <audio autoplay="autoplay">
+      <source src="sound_effects/invader2.mp3"/>
+    </audio>
+
+    <script src="js/bullet.js"></script>
+    <!-- <script src="js/lasers.js"></script>  -->
+    <script src="js/liamNeeson.js"></script>
+    <script src="js/minion.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>

@@ -4,7 +4,7 @@
 // });
 
 //Define instance of liamNeeson object
-const liam = new LiamNeeson(400, 300);
+const liam = new LiamNeeson(450, 500);
 liam.setArrowHandler();
 
 //Defines bullet array and connects it with spacebar control
@@ -17,9 +17,19 @@ document.body.addEventListener('keydown', (e) => {
 
 //Defines minion array
 // let minions = [new Minion(20, 20), new Minion(70, 20), new Minion(40, 20)];
-let minions = [];
+let wolfMinions = [];
+for (let i = 0; i < 5; i++) {
+  wolfMinions.push(new WolfMinion(Math.floor(Math.random()), 20))
+}
+
+let thugMinions = [];
+for (let i = 0; i < 7; i++) {
+  thugMinions.push(new ThugMinion(Math.floor(Math.random()), 120))
+}
+
+let thugMinions2 = [];
 for (let i = 0; i < 10; i++) {
-  minions.push(new Minion(Math.floor(Math.random()), 20))
+  thugMinions2.push(new ThugMinion2(Math.floor(Math.random()), 210))
 }
 
 let collisionThreshold = 30;
@@ -27,11 +37,11 @@ let collisionThreshold = 30;
 setInterval(() => {
   collisionThreshold--;
   console.log(collisionThreshold);
-}, 2000);
+}, 3000);
 
 function draw() {
   const canvasContext = document.getElementById('canvas').getContext('2d');
-  canvasContext.clearRect(0, 0, 900, 400);
+  canvasContext.clearRect(0, 0, 1000, 600);
 
   canvasContext.globalCompositeOperation = 'destination-over';
   canvasContext.drawImage(liam.el, liam.x, liam.y, 100, 100);
@@ -42,11 +52,31 @@ function draw() {
     canvasContext.drawImage(bullet.el, bullet.x, bullet.y, 100, 100);
     bullet.step();
 
-    minions.forEach((mini) => {
+    wolfMinions.forEach((mini) => {
       if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
         Math.abs(bullet.y - mini.y) < collisionThreshold) {
-        minions.splice(mini, 1);
-        liam.enthusiam += 5;
+        wolfMinions.splice(mini, 1);
+
+        liam.enthusiam += 300;
+        console.log("BOOOM!");
+      }
+    });
+
+    thugMinions.forEach((mini) => {
+      if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
+        Math.abs(bullet.y - mini.y) < collisionThreshold) {
+        thugMinions.splice(mini, 1);
+        bullet.delete();
+        liam.enthusiam += 200;
+        console.log("BOOOM!");
+      }
+    });
+
+    thugMinions2.forEach((mini) => {
+      if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
+        Math.abs(bullet.y - mini.y) < collisionThreshold) {
+        thugMinions2.splice(mini, 1);
+        liam.enthusiam += 100;
         console.log("BOOOM!");
       }
     });
@@ -61,7 +91,17 @@ function draw() {
   bullets = bullets.filter((ele) => ele);
 
   // Make the min's move
-  minions.forEach((mini) => {
+  wolfMinions.forEach((mini) => {
+    mini.step();
+    canvasContext.drawImage(mini.el, mini.x, mini.y, collisionThreshold * 2, collisionThreshold * 2);
+  });
+
+  thugMinions.forEach((mini) => {
+    mini.step();
+    canvasContext.drawImage(mini.el, mini.x, mini.y, collisionThreshold * 2, collisionThreshold * 2);
+  });
+
+  thugMinions2.forEach((mini) => {
     mini.step();
     canvasContext.drawImage(mini.el, mini.x, mini.y, collisionThreshold * 2, collisionThreshold * 2);
   });
@@ -71,7 +111,17 @@ function draw() {
 
 draw();
 
-
+// i = 60;
+// function onTimer() {
+//   document.getElementById('mycounter').innerHTML = i;
+//   i--;
+//   if (i < 0) {
+//     alert('You lose!');
+//   }
+//   else {
+//     setTimeout(onTimer, 1000);
+//   }
+// }
 
 
 // Previous App Functionality

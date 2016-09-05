@@ -2,27 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Space Invaders + Liam Neeson</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Splash Screen</title>
+    <link rel="stylesheet" type="text/css" href="css/splash_screen_style.css">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
-
   <body>
-    <h3 id="space-invaders">SPACE INVADERS </h3>
-    <h2 id="taken">TAKEN BY </h2>
-    <h1 id="name">LIAM NEESON</h1>
 
 
-    <img class="image" src="http://static.tumblr.com/e6c66693fd556d0238902201972d0600/z7sewyz/vwWo7w6i4/tumblr_static_7lsovhd013kssko4og8osc80k.gif"/>
+  <div id="static">
+    <div id="splash-screen" class="fade-out">
+      <div id="titles">
+      <h3>SPACE INVADERS </h3>
+      <h5 >HIT
+      <span id="blink">SPACEBAR</span>
+      TO PLAY
+      </h5>
+      </div>
+    </div>
 
-    <canvas id="canvas" width="900" height="400"></canvas>
+    <p id="quote">Once more into the fray. </br>
+      Into the last good fight </br>
+      I'll ever know. </br>
+      Live and die on this day. </br>
+      Live and die to invade.</br>
+    <p>
+    <p id="action">HIT <span id ="kick-ass">ENTER</span> TO KICK ASS</p>
 
-    <script src="js/bullet.js"></script>
-    <!-- <script src="js/lasers.js"></script>  -->
-    <script src="js/liamNeeson.js"></script>
-    <script src="js/minion.js"></script>
-    <script src="js/app.js"></script>
+    <audio autoplay="autoplay">
+      <source src="sound_effects/si_theme.mp3" />
+    </audio>
+
+  </div>
+
+      <script src="js/splash_screen.js"></script>
   </body>
-
 </html>
