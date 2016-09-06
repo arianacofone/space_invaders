@@ -7,33 +7,32 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   </head>
   <body>
+    <div id="static">
 
-
-  <div id="static">
-    <div id="splash-screen" class="fade-out">
-      <div id="titles">
-      <h3>SPACE INVADERS </h3>
-      <h5 >HIT
-      <span id="blink">SPACEBAR</span>
-      TO PLAY
-      </h5>
+      <!-- FAKE SPLASH SCREEN HTML -->
+      <div id="splash-screen" class="fade-out">
+        <div id="titles">
+          <h3>SPACE INVADERS </h3>
+          <h5 >HIT <span id="blink">SPACEBAR</span> TO PLAY</h5>
+        </div>
       </div>
+
+      <!-- REAL SPLASH SCREEN HTML -->
+      <p id="quote">Once more into the fray. </br>
+        Into the last good fight </br>
+        I'll ever know. </br>
+        Live and die on this day. </br>
+        Live and die to invade.</br>
+      </p>
+      <p id="action">HIT <span id ="kick-ass">ENTER</span> TO KICK ASS</p>
+
+      <!-- AUDIO FEATURES -->
+      <audio autoplay="autoplay">
+        <source src="sound_effects/si_theme.mp3" />
+      </audio>
+
     </div>
 
-    <p id="quote">Once more into the fray. </br>
-      Into the last good fight </br>
-      I'll ever know. </br>
-      Live and die on this day. </br>
-      Live and die to invade.</br>
-    <p>
-    <p id="action">HIT <span id ="kick-ass">ENTER</span> TO KICK ASS</p>
-
-    <audio autoplay="autoplay">
-      <source src="sound_effects/si_theme.mp3" />
-    </audio>
-
-  </div>
-
-      <script src="js/splash_screen.js"></script>
+    <script src="js/splash_screen.js"></script>
   </body>
 </html>

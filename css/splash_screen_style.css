@@ -16,10 +16,11 @@ body {
   margin-left: 2rem;
   text-shadow: .05rem .05rem white;
   color: black;
+  /*ADDITIONAL CODE NEEDED FOR FUTURE VISUAL COMPONENT*/
   /*white-space: nowrap;
   overflow: hidden;
   width: 30em;
-  animation: type 4s steps(60, end);*/*/
+  animation: type 4s steps(60, end);*/
 }
 
 #action {
@@ -102,6 +103,7 @@ h5 {
 .hide{
   opacity: 0;
  }
+
 .fade-out {
   transition:1s linear all;
 }
