@@ -88,20 +88,20 @@ function draw() {
       return bullet;
     }
     // Attempt at trying to delete bullet that are labeled null
-    bullets.forEach((bullet) => {
-      if (bullet === null) {
-        bullets.splice(bullet);
-      }
-    });
+    // bullets.forEach((bullet) => {
+    //   if (bullet === null) {
+    //     bullets.splice(bullet);
+    //   }
+    // });
 
     // Attempt at trying to delete bullet upon collision
-    bullets.forEach((bullet) => {
-      if (Math.abs(bullet.x - wolfMinions.x) < collisionThreshold &&
-        Math.abs(bullet.y - wolfMinions.y) < collisionThreshold) {
-        bullets.splice(bullet, 1);
-        console.log("BAM!");
-      }
-    });
+    // bullets.forEach((bullet) => {
+    //   if (Math.abs(bullet.x - wolfMinions.x) < collisionThreshold &&
+    //     Math.abs(bullet.y - wolfMinions.y) < collisionThreshold) {
+    //     bullets.splice(bullet, 1);
+    //     console.log("BAM!");
+    //   }
+    // });
   });
 
   bullets = bullets.filter((ele) => ele);
@@ -116,7 +116,7 @@ function draw() {
     mini.step();
     canvasContext.drawImage(mini.el, mini.x, mini.y, 80, 80);
   });
-  // Draw the minions and sets their size 
+  // Draw the minions and sets their size
   thugMinions2.forEach((mini) => {
     mini.step();
     canvasContext.drawImage(mini.el, mini.x, mini.y, 80, 80);
