@@ -58,7 +58,6 @@ function draw() {
         Math.abs(bullet.y - mini.y) < collisionThreshold) {
         wolfMinions.splice(mini, 1);
         liam.enthusiam += 300;
-        bullets.splice(bullet, 1);
         // console.log("BOOOM!");
       }
     });
