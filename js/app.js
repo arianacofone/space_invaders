@@ -56,7 +56,8 @@ function draw() {
     wolfMinions.forEach((mini) => {
       if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
         Math.abs(bullet.y - mini.y) < collisionThreshold) {
-        wolfMinions.splice(mini, 1);
+        let index = wolfMinions.indexOf(mini);
+        wolfMinions.splice(index, 1);
         liam.enthusiam += 300;
         // console.log("BOOOM!");
       }
@@ -65,8 +66,10 @@ function draw() {
     thugMinions.forEach((mini) => {
       if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
         Math.abs(bullet.y - mini.y) < collisionThreshold) {
-        thugMinions.splice(mini, 1);
-        liam.enthusiam += 200;
+        let index = thugMinions.indexOf(mini);
+          console.log(index);
+          thugMinions.splice(index, 1);
+          liam.enthusiam += 200;
         // console.log("BOOOM!");
       }
     });
@@ -74,7 +77,9 @@ function draw() {
     thugMinions2.forEach((mini) => {
       if (Math.abs(bullet.x - mini.x) < collisionThreshold &&
         Math.abs(bullet.y - mini.y) < collisionThreshold) {
-        thugMinions2.splice(mini, 1);
+        let index = thugMinions2.indexOf(mini);
+        console.log(index);
+        thugMinions2.splice(index, 1);
         liam.enthusiam += 100;
         // console.log("BOOOM!");
       }
