@@ -1,7 +1,7 @@
 # Space Invaders + Liam Neeson
 
 <p align="center">
-  <img src="http://arianadziedzic.com/pickUpSticks/css/space-invaders-readme.png" width="800"/>
+  <img src="http://arianadziedzic.com/space_invaders/css/space-invaders-readme.png" width="800"/>
 </p>
 
 As a late bloomer to video games, it took an arcade bar and a couple of beers to 
@@ -10,7 +10,7 @@ it became a game that would haunt me forever (Curse you level 2!). Faced with my
 project as a developer, I knew I had to attempt this beast of a game, but with a 
 twist. Liam Neeson.
 
-Enjoy it on my <a href="http://arianadziedzic.com/pickUpSticks/index.html" target="_blank">website</a>!
+Enjoy it on my <a href="http://arianadziedzic.com/space_invaders/index.html" target="_blank">website</a>!
 
 ## Getting Started
 Want to make a Space Invaders version of your own, but with Angelina Jolie as the lead? No problem! 
@@ -45,7 +45,7 @@ visual components were rendered using the draw() function, while simultaneously 
 overall functionality of the game. Simple enough! 
 
 <p align="center">
-  <img src="http://arianadziedzic.com/pickUpSticks/css/space-invaders-readme2.png" width="800"/>
+  <img src="http://arianadziedzic.com/space_invaders/css/space-invaders-readme2.png" width="800"/>
 </p>
 
 For the cherry on top, I got fancy with the splash page to surprise players with the twist. And that's it!
