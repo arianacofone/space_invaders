@@ -4,19 +4,19 @@
   <img src="http://arianadziedzic.com/space_invaders/css/space-invaders-readme.png" width="800"/>
 </p>
 
-As a late bloomer to video games, it took an arcade bar and a couple of beers to 
-understand the incredibly addictive nature of Space Invaders. Four hours later, 
-it became a game that would haunt me forever (Curse you level 2!). Faced with my first 
-project as a developer, I knew I had to attempt this beast of a game, but with a 
+As a late bloomer to video games, it took an arcade bar and a couple of beers to fully
+understand the addictive nature of Space Invaders. Four hours later, 
+it became a game that would haunt me forever (Curse you level 2!). Faced with my first
+project as a developer, I knew I had to attempt this beast of a game, but with a
 twist. Liam Neeson.
 
 Enjoy it on my <a href="http://arianadziedzic.com/space_invaders/index.html" target="_blank">website</a>!
 
 ## Getting Started
-Want to make a Space Invaders version of your own, but with Angelina Jolie as the lead? No problem! 
+Want to make a Space Invaders version of your own, but with Angelina Jolie as the lead? No problem!
 These instructions will help get your project off the ground with some starting tips. </br>
 
-Using the newest syntax of Javascript, I grouped each component of the game (Liam Neeson, minions, 
+Using the newest syntax of Javascript, I grouped each component of the game (Liam Neeson, minions,
 bullet, etc) within a class object of their own, looping in the keyboard element in a method of that object.
 
 ```
@@ -42,7 +42,7 @@ class LiamNeeson {
 
 Tying all of the pieces together in app.js, canvas is the platform where all of the
 visual components were rendered using the draw() function, while simultaneously thredding the
-overall functionality of the game. Simple enough! 
+overall functionality of the game. Simple enough!
 
 <p align="center">
   <img src="http://arianadziedzic.com/space_invaders/css/space-invaders-readme2.png" width="800"/>
